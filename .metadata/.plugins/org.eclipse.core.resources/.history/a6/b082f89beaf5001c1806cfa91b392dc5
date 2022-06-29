@@ -1,0 +1,25 @@
+package com.edu.test;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+
+
+@WebServlet("/third")
+public class ThirdServlet extends HttpServlet{
+	@Override
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("Third!");
+		
+		PrintWriter out = resp.getWriter(); //외부 데이터 읽어오는 작업
+		resp.setContentType("text/html; charset=UTF-8"); //content type 설정
+		out.print("<h1>Have a nice day!"); //body에 데이터 보내는 작업
+		out.print("<h1>즐거운 저녁 보내세요~");
+		out.close(); //정보 그만 받고자 닫는 작업
+	}
+}

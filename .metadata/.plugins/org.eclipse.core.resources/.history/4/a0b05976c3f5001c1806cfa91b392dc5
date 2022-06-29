@@ -1,0 +1,5 @@
+package com.edu.test; //FirstServlet은 com.edu.test 경로 안에 있음
+
+public class FirstServlet {
+
+}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FormTest</title>
+</head>
+<body>
+	<form action="" method="GET">
+		ID: <input type="text" name="id">	<br>
+		
+		<input type="submit" value="전송"> <!-- submit: form에서 받은 정보 전달하는 역할 -->
+	</form>
+</body>
+</html>

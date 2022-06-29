@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FormTest</title>
+</head>
+<body>
+	<form action="" method="GET">
+		ID: <input type="text"><br>
+	
+	</form>
+</body>
+</html>

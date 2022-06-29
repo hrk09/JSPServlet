@@ -1,0 +1,7 @@
+package com.edu.test;
+
+import java.io.*;
+
+public class Temp {
+
+}

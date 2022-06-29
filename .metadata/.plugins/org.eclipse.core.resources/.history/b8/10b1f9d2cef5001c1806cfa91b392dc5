@@ -1,0 +1,7 @@
+package com.edu.test; //FirstServlet은 com.edu.test 경로 안에 있음
+
+import javax.servlet.http.*; // 패키지 
+
+public class FirstServlet extends HttpServlet{ //servelet 쓸 때 extends HttpServlet에서 상속받아야 한다.
+
+}

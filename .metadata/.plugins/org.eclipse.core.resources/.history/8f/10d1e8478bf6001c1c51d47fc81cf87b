@@ -1,0 +1,32 @@
+package com.edu.test;
+
+import java.io.*;
+import java.util.Enumeration;
+
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+@WebServlet("/test2")
+public class Test2 extends HttpServlet{
+	//GET 방식으로 요청시 HttpServlet 의 service() 메소드에 의해 호출되는 메소드
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html;charset=UTF-8");
+		PrintWriter out = resp.getWriter();
+		out.print("<h1>Get 방식으로 요청됨</h1>");
+		
+		out.print("<h2>" + req.getMethod());		//GET 방식은 body가 아닌 header 정보만 전달된다
+		out.print("<h2>" + req.getContentLength()); //결과값 : -1; 데이터 자체가 존재하지 않을 때
+		out.print("<h2>" + req.getContentType());   //결과값 : null; 데이터 자체가 존재하지 않을 때
+		out.print("<h2>" + req.getQueryString());	//결과값 : null;
+		
+		
+		Enumeration<String> em = req.getHeaderNames();
+		while(em.hasMoreElements()) {
+			String s = em.nextElement();
+			out.print("<h3>" + s + ":" + req.getHeader(s));
+		}
+		
+		out.close();
+	}
+}

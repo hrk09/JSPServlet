@@ -1,0 +1,18 @@
+package com.edu.test;
+
+import java.io.*;
+
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+@WebServlet("/temp")
+public class ServletContextTest extends HttpServlet{
+	//GET ������� ��û�� HttpServlet �� service() �޼ҵ忡 ���� ȣ��Ǵ� �޼ҵ�  euc-kr을 utf-8로 변경하면 기존 글자가 깨짐
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html;charset=UTF-8");
+		PrintWriter out = resp.getWriter();
+		out.print("<h1>Get 방식으로 요청됨</h1>");
+		out.close();
+	}
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FormTest</title>
+</head>
+<body>
+	<form action="" method="GET">
+		ID: <input type="text" name="id" value="guest">	<br>
+		비밀번호: <input type="password" name="pwd" value="12345">	<br>
+		성별: 
+			<input type="radio" name="gender" value="male" checked>남자
+			<input type="radio" name="gender" value="female" >여자	<br>
+		좋아하는 색상:
+			<input type="checkbox" name="color" value="red" checked>빨강
+			<input type="checkbox" name="color" value="orange">주황
+			<input type="checkbox" name="color" value="yellow">노랑
+			<input type="checkbox" name="color" value="green">초록	<br>
+		도시:
+			<select name="city">
+				<option	value="seoul">서울
+				<option	value="gyeonggi">경기 
+				<option	value="kangwon">강원
+				<option	value="kwangju">광주
+				<option	value="busan" selected>부산			
+			</select><br>
+			
+		<textarea rows="10" cols="30">안녕하세요~</textarea><br>
+			
+		<input type="submit" value="전송"> <!-- submit: form에서 받은 정보 전달하는 역할 -->
+		<input type="reset"	value="지우기">
+		<input type="button" value="버튼">
+	</form>
+</body>
+</html>

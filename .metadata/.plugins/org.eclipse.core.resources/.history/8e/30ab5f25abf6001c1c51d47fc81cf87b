@@ -1,0 +1,8 @@
+package com.edu.test;
+
+//POJO
+public class ShareObject {
+	private int count;
+	private String str;
+	
+}
