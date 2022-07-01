@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LogInOut</title>
+</head>
+<body>
+	<form action="logProc" method="post"> <!-- ID/PWD는 URL에 노출되면 안되므로 POST 방식으로 해야함 -->
+		ID : <input type="text" name="id"><br>
+		PWD: <input type="password" name="pwd"><br>
+		<input type="submit" value="LOGIN">
+	</form>
+	
+	<p><a href="logProc">LOGOUT</a></p>
+	
+</body>
+</html>

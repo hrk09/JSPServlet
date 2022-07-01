@@ -1,25 +1,25 @@
-package com.edu.test; //FirstServletÀº com.edu.test °æ·Î ¾È¿¡ ÀÖÀ½
+package com.edu.test;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*; // HttpServlet ¾²·Á¸é ÆÐÅ°Áö importÇØ¾ßÇÔ
+import javax.servlet.http.*;
 
-@WebServlet("/second") //¾î³ëÅ×ÀÌ¼Ç ¹æ½Ä
-public class SecondServlet extends HttpServlet{ // ¼­ºí¸´ ¾µ ¶§ extends HttpServlet¿¡¼­ »ó¼Ó¹Þ¾Æ¾ß ÇÑ´Ù.	
-
-	@Override
-		public void init(ServletConfig config) throws ServletException {
-		// ÃÖÃÊ¿¡ 1¹ø È£ÃâµÊ -> ÃÊ±âÈ­ ÀÛ¾÷
-		System.out.println("Second Init() È£Ãâ!");
-		}
+@WebServlet("/second") 
+public class SecondServlet extends HttpServlet{	
 	
 	@Override
-	public void service(HttpServletRequest arg0, HttpServletResponse arg1) throws ServletException, IOException {
-		// ¼­ºñ½º ±¸Çö
-		System.out.println("Second Service() È£Ãâ!");
+	public void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		System.out.println("Second Servlet ì‹¤í–‰!");
+		
+		resp.setContentType("text/html;charset=UTF-8");
+		PrintWriter out = resp.getWriter();
+		out.print("<h1>Second Servlet ì‹¤í–‰!</h1>");
+		out.close();
 	}
 	
 	

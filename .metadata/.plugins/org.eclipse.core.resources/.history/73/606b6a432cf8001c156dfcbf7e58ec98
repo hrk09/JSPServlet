@@ -1,0 +1,6 @@
+<%@ page import="java.util.*" %>
+<%@ page import="java.io.*, javax.sql.*" %>
+
+<% Date d = new Date();	%>
+
+<%= d %>

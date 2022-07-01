@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>edu</display-name>
+  
+  <context-param>
+  	<param-name>config</param-name>
+  	<param-value>hello</param-value>
+  </context-param>
+  
+  <!-- Filter 등록 -->
+  <filter>
+  	<filter-name>flow1</filter-name>
+  	<filter-class>com.edu.test.FlowFilter1</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>flow2</filter-name>
+  	<filter-class>com.edu.test.FlowFilter2</filter-class>
+  </filter>  
+  
+  <!-- Filter 매핑 -->
+  <filter-mapping></filter-mapping>
+  
+  <servlet>
+	   <servlet-name>first</servlet-name> <!-- shift + enter: 커서 그대로 이동 -->	
+	   <servlet-class>com.edu.test.FirstServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>test3</servlet-name>
+  	<servlet-class>com.edu.test.Test3</servlet-class>
+  	<init-param>
+  		<param-name>id</param-name>
+  		<param-value>guest</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>pwd</param-name>
+  		<param-value>1004</param-value>
+  	</init-param>
+  	<load-on-startup>1</load-on-startup>
+  	
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>test3</servlet-name>
+  	<url-pattern>/test3</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping> <!-- servlet url 만들기 -->
+  		<servlet-name>first</servlet-name>
+  		<url-pattern>/hello</url-pattern> <!-- http://127.0.0.1:8080/edu/hello 검색하면 이 FirstServlet 서블릿 실행해줘-->
+  		<!-- url-pattern 시 "/" 빼먹지 말기!!! -->
+  </servlet-mapping>
+</web-app>

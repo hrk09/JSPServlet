@@ -1,0 +1,33 @@
+package com.edu.test;
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+
+@WebServlet("/sessionTest")
+public class SessionTest extends HttpServlet{
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html;charset=UTF-8");
+		PrintWriter out = resp.getWriter();
+		
+		String param = req.getParameter("p");
+		
+		System.out.println(param);  //param 없이 서버 실행하면 null 값이 뜸
+		HttpSession session = null;
+		String msg = null;
+		
+		if(param.equals("create")) { //param 안에 create라는 게 있다면
+			session = req.getSession();
+			if(session.isNew()) {
+				msg = "새로운 세션객체가 생성되었습니다.";
+			} else {
+				msg = "기존 세션 객체가 리턴되었습니다.";
+			}
+		}
+		
+		
+		out.close();
+	}
+}

@@ -1,0 +1,15 @@
+<%@page import="com.edu.test.Book"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    <% 
+    	Book book = (Book)request.getAttribute("book"); 
+    %>
+    
+	<h1>책 정보 등록</h1>
+	<form action="bookReg" method="post">
+		제목: <input type="text" name="title" value="<%=book.getTitle() %>"><br>
+		저자: <input type="text" name="author" value="<%=book.getAuthor() %>"><br>
+		출판사: <input type="text" name="publisher" value="<%=book.getPublisher() %>"><br>
+		<input type="submit" value="등록">
+	</form>

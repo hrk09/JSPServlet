@@ -1,0 +1,46 @@
+package com.edu.test;
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+
+@WebServlet("/logProc")
+
+public class LongInOutServlet extends HttpServlet{
+	//로그인 요청 서비스 메소드	
+	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html;charset=UTF-8");
+		PrintWriter out = resp.getWriter();
+		out.print("<h1>Post 방식으로 요청됨</h1>");
+		
+		//1. parameter 추출
+		String id = req.getParameter("id"); //name 대소문자 주의
+		String pwd = req.getParameter("pwd"); 
+		
+		//2. 유효성검사
+		if(id.isEmpty() || pwd.isEmpty()){ //id or pwd가 비어있으면
+			System.out.println("id 또는  pwd를 입력해주세요.");
+			return; //현재 실행중인 메소드 종료
+		}
+		
+		//3. DB check
+		
+		//4. 로그인 상태 여부 검사
+		HttpSession session = req.getSession();
+		
+				
+		//5. 
+		
+		
+		out.close();
+	}
+	
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html;charset=UTF-8");
+		PrintWriter out = resp.getWriter();
+		out.print("<h1>Get 방식으로 요청됨</h1>");
+		out.close();
+	}
+}

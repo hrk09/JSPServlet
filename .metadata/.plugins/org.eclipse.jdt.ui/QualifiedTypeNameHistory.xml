@@ -5,4 +5,12 @@
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="java.util.Enumeration"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletConfig"/>
+<fullyQualifiedTypeName name="com.sun.corba.se.impl.ior.GenericTaggedComponent"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="com.edu.test.RequestDispatcherTest1"/>
+<fullyQualifiedTypeName name="com.edu.test.BookTest1"/>
+<fullyQualifiedTypeName name="javax.servlet.Filter"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContextListener"/>
+<fullyQualifiedTypeName name="jdk.nashorn.internal.ir.RuntimeNode.Request"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 </qualifiedTypeNameHistroy>

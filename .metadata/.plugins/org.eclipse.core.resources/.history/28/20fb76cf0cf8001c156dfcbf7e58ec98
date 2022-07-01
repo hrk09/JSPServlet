@@ -1,0 +1,21 @@
+package com.edu.test; //FirstServlet�� com.edu.test ��� �ȿ� ����
+
+import java.io.IOException;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*; // HttpServlet ������ ��Ű�� import�ؾ���
+
+@WebServlet("/second") //������̼� ���
+public class SecondServlet extends HttpServlet{ // ���� �� �� extends HttpServlet���� ��ӹ޾ƾ� �Ѵ�.	
+	
+	@Override
+	public void service(HttpServletRequest arg0, HttpServletResponse arg1) throws ServletException, IOException {
+		// ���� ����
+		System.out.println("Second Service() ȣ��!");
+	}
+	
+	
+	
+}

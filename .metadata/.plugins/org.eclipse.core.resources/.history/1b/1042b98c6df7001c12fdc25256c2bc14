@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>포털사이트</title>
+</head>
+<body>
+	<form>
+		<input type="radio" name="site" value="naver">네이버
+		
+	</form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%
+	RequestDispatcher rd = request.getRequestDispatcher("exam06.jsp");
+	
+	if(request.getMethod().equals("POST")){
+		//로그인 처리
+		String id = request.getParameter("id");
+		String pwd = request.getParameter("pwd");
+		
+		//유효성검사
+		if(id.isEmpty() || pwd.isEmpty()){ //id or pwd가 하나라도 되지 않는다면,
+			rd.forward("");
+		}
+		
+		
+	} else if (request.getMethod().equals("GET")){
+		//로그아웃 처리
+	}
+
+%>

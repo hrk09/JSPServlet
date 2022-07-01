@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+	<% String str =request.getAttribute("msg"); %>
+	
+<form action="logProc.jsp" method="post">
+	ID : <input type="text" name="id"><br> 
+	PWD: <input	type="password" name="pwd"><br> <input type="submit" value="LOGIN">
+	<input type="submit" value="LOGIN">
+</form>
+
+<p>
+	<a href="logProc.jsp">LOGOUT</a>
+</p>

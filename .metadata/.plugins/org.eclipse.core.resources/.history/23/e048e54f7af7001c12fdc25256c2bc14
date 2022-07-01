@@ -1,0 +1,37 @@
+package com.edu.test;
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+
+@WebServlet("/bookReg")
+public class BookTest1 extends HttpServlet{
+	
+	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//body 안 한글처리
+		req.setCharacterEncoding("utf-8");
+		
+		//1. client가 넘겨준  parameter 추출
+		String title = req.getParameter("title");
+		String author = req.getParameter("author");
+		String publisher = req.getParameter("publisher");
+		
+		//1-1. 유효성검사
+		
+		//2. VO 생성 및 데이터 바인딩
+		Book b = new Book();
+		
+		b.setTitle(title);
+		b.setAuthor(author);
+		b.setPublisher(publisher);
+		
+		//3. Request에 데이터 등록
+		req.setAttribute("book", b);
+		
+		//4. 페이지 이동
+		RequestDispatcher rd = req.getRequestDispatcher("bookOutput");
+		rd.forward(req, resp);
+	}
+}

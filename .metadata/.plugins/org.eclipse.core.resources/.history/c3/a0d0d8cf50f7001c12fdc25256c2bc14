@@ -1,0 +1,25 @@
+package com.edu.test;
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+
+@WebServlet("/sessionTest")
+public class SessionTest extends HttpServlet{
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html;charset=UTF-8");
+		PrintWriter out = resp.getWriter();
+		
+		String param = req.getParameter("p");
+		
+		System.out.println(param);  //param 없이 서버 실행하면 null 값이 뜸
+		HttpSession session = null;
+		String msg = null;
+		
+		
+		
+		out.close();
+	}
+}

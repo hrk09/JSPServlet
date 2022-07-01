@@ -1,0 +1,6 @@
+package com.edu.test;
+
+//VO 객체(Value Object:값 저장용도)
+public class Book {
+
+}

@@ -1,0 +1,7 @@
+<%@ page import="java.util.*" %>
+<%@ page import="java.io.*, javax.sql.*" %>
+
+<h1>Date: </h1>
+
+<% Date d = new Date();	%>
+<%= d %> <!--  out.print(d); -->

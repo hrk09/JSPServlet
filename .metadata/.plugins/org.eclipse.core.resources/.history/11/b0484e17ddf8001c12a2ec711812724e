@@ -1,0 +1,14 @@
+package com.edu.test;
+
+public class HelloBean {
+	
+	private String name;
+	private String num;
+	
+	//기본생성자
+	public HelloBean() {
+		this.name = "no name";
+		this.num = "no num";
+	}
+	
+}

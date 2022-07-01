@@ -1,0 +1,16 @@
+package com.edu.test;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+
+public class MyListener implements ServletContextListener{
+	//ServletContext 객체 생성시 호출 = 서버 시작시
+	public void contextInitialized(ServletContextEvent arg0) {
+		
+	}
+	
+	//ServletContextListener 객체 삭제시 호출 = 서버 중지시 
+	public void contextDestroyed(ServletContextEvent arg0) {
+
+	}
+}

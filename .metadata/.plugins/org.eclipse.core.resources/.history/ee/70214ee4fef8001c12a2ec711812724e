@@ -1,0 +1,11 @@
+package com.edu.beans;
+
+public class Member {
+	private String id;
+	private String passwd;
+	private String name;
+	private String mail;
+
+	//getter, setter 메소드를 추가하세요
+
+}

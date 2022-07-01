@@ -1,0 +1,19 @@
+package com.edu.test;
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+
+@WebServlet("/bookReg")
+public class BookTest1 extends HttpServlet{
+	
+	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		//1. client가 넘겨준  param 추출
+		
+		
+		//2.
+	}
+}

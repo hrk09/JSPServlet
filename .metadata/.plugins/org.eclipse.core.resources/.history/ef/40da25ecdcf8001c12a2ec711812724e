@@ -1,0 +1,10 @@
+package com.edu.test;
+
+public class HelloBean {
+	
+	private String name;
+	private String num;
+	
+	
+	
+}
