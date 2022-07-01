@@ -7,6 +7,5 @@
 
 <%
 	InitialContext ic = new InitialContext();	//JNDI 서버
-	DataSource ds = (DataSource)ic.lookup("java:conp/env/jdbc/myoracle");
-	Connection conn = ds.getConnection();
+	DataSource ds = ic.lookup("java:conp/env/jdbc/myoracle");
 %>
